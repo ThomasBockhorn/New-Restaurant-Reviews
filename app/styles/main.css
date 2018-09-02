@@ -276,15 +276,19 @@ nav h1 a {
   color: #666;
 }
 
-/*==================Responsive CSS =============================*/
+/*==================Responsive CSS  for index.html and restaurant.html=============================*/
 html,
-body{
+body,
+#restaurant #inside,
+#restaurant{
     width: 100%;
     height: 100%;
     margin: 0;
 }
 body,
-#maincontent{
+#maincontent, 
+#inside,
+#inside #maincontent{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -299,16 +303,25 @@ width: 100%;
 margin: 0;
 }
 
+#inside,
+#restaurant{
+    width: 100%;
+    height: 100%;
+}
+
+#map{
+    height: 100%;
+    width: 100%;
+}
 
 
 @media screen and (max-width: 425px){
-    /*hide everything except for the map create a hamburger icon which will make the options appear
-    header,*/
+    /*hide everything except for the map*/
     #filter,
     #footer{
         display: none;
     }
-    #map-container{
+    #firstmap{
         height: 100%;
     }
     #map{
@@ -320,10 +333,50 @@ margin: 0;
     }
     #maincontent{
         order: 1;
-        height: 90%
+        height: 90%;
+    }
+
+     /*=====restaurant response css=====*/
+     #inside #heading{
+        height: 10%;
+        width: 100%;
+        order: 0;
+    }
+    #inside #maincontent{
+        order: 1;
+        width: 100%;
+        height: 80%;
+    }
+    #inside #footer{
+        display: block;
+        order: 2;
+        width: 100%;
+        height: 10%;
+    }
+    /*====inside content of restaurant.html=======*/
+    #maincontent #map-container{
+        order: 0;
+        height: 40%;
+        width: 100%;
+        background-color: black;
+    }
+    #maincontent #restaurant-container{
+        order: 1;
+        height: 15%;
+        width: 100%;
+        padding: 0;
+        font-size: 1em;
+        margin: auto;
+    }
+    #maincontent #reviews-container{
+        order: 2;
+        height: 40%;
+        width: 100%;
+        padding: 0;
     }
 }
-@media screen and (min-width: 768px){
+    
+@media screen and (max-width: 768px){
     html,
     body{
         height: 100%;
@@ -343,14 +396,11 @@ margin: 0;
         height: 10%;
         width: 100%;
     }
-    #map-container{
+    .map-container{
         order: 1;
         width: 100%;
         height: 60%;
         margin: 0;
-    }
-    #map{
-        height: 100%;
     }
     #filter{
         order: 2;
@@ -358,4 +408,82 @@ margin: 0;
         width: 100%;
         margin: 0;
     }
+    /*==============Restaurant.html========================*/
+    #inside #heading{
+        height: 10%;
+        width: 100%;
+        order: 0;
+    }
+    #inside #maincontent{
+        order: 1;
+        width: 100%;
+        height: 80%;
+    }
+    #inside #footer{
+        display: block;
+        order: 2;
+        width: 100%;
+        height: 10%;
+        margin: 0;
+    }
+    #maincontent #restaurant-container{
+        width: 37%;
+        height: 40%;
+        order: 0;
+        margin: auto
+    }
+    #maincontent #restaurant-review{
+        width: 37%;
+        height: 40%;
+        order: 1;
+        padding: 0;
+        margin: auto;
+    }
+    #map-container{
+        width: 39.5%;
+        height: 100%;
+        order: 2;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #inside #heading{
+        height: 10%;
+        width: 100%;
+        order: 0;
+    }
+    #inside #maincontent{
+        order: 1;
+        width: 100%;
+        height: 80%;
+    }
+    #inside #footer{
+        display: block;
+        order: 2;
+        width: 100%;
+        height: 10%;
+        margin: 0;
+    }
+    #maincontent #restaurant-container{
+        width: 37%;
+        height: 40%;
+        order: 0;
+        margin: auto
+    }
+    #maincontent #restaurant-review{
+        width: 37%;
+        height: 40%;
+        order: 1;
+        padding: 0;
+        margin: auto;
+    }
+    #map-container{
+        width: 44%;
+        height: 100%;
+        order: 2;
+        padding: 0;
+        margin: 0;
+    } 
 }

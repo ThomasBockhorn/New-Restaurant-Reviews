@@ -1,0 +1,26 @@
+.inside{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 425px){
+    .inside #heading{
+        height: 10%;
+        width: 50%;
+        order: 0;
+        background: red;
+    }
+    .inside #maincontent{
+        order: 1;
+        height: 80%;
+        width: 100%;
+    }
+    .inside #footer{
+        order: 2;
+        height: 10%;
+        width: 100%;
+    }
+}
