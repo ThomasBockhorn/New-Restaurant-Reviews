@@ -314,6 +314,11 @@ margin: 0;
     width: 100%;
 }
 
+#footer{
+    position: fixed;
+    bottom: 0;
+}
+
 
 @media screen and (max-width: 425px){
     /*hide everything except for the map*/
